@@ -3,7 +3,7 @@ import './style.css';
 
 export default class App extends React.Component {
   state = {
-    checkboxChacked: [],
+    education: '',
   };
 
   submit = (e) => {
@@ -49,6 +49,14 @@ export default class App extends React.Component {
             />
           </div>
           <br />
+          <button
+            type="button"
+            onClick={() => {
+              console.log(this.state);
+            }}
+          >
+            Add Checkbox
+          </button>
         </div>
       </>
     );
