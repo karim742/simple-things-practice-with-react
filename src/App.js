@@ -2,7 +2,9 @@ import React from 'react';
 import './style.css';
 
 export default function App() {
-  console.log('hello');
+  const handleInput = (e) => {
+    console.log(e.target.value);
+  };
   return (
     <div>
       <h3 style={{ color: 'red' }}>React practice with StackBlitz!</h3>
@@ -10,14 +12,14 @@ export default function App() {
 
       <div className="container">
         <label htmlFor="HSC">HSC</label>
-        <input type="checkbox" id="HSC" value="HSC" />
+        <input type="checkbox" id="HSC" value="HSC" onChange={handleInput} />
         <br />
         <label htmlFor="SSC">SSC</label>
-        <input type="checkbox" id="SSC" value="SSC" />
+        <input type="checkbox" id="SSC" value="SSC" onChange={handleInput} />
         <br />
 
         <label htmlFor="JSC">JSC</label>
-        <input type="checkbox" id="JSC" value="JSC" />
+        <input type="checkbox" id="JSC" value="JSC" onChange={handleInput} />
       </div>
     </div>
   );
