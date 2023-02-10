@@ -1,26 +1,56 @@
 import React from 'react';
 import './style.css';
 
-export default function App() {
-  const handleInput = (e) => {
-    console.log(e.target.value);
+export default class App extends React.Component {
+  state = {
+    checkboxChacked: [],
   };
-  return (
-    <div>
-      <h3 style={{ color: 'red' }}>React practice with StackBlitz!</h3>
-      <h4>Checkbox with react</h4>
 
-      <div className="container">
-        <label htmlFor="HSC">HSC</label>
-        <input type="checkbox" id="HSC" value="HSC" onChange={handleInput} />
-        <br />
-        <label htmlFor="SSC">SSC</label>
-        <input type="checkbox" id="SSC" value="SSC" onChange={handleInput} />
-        <br />
+  submit = (e) => {
+    this.setState({
+      [e.target.name]: e.target.checked,
+    });
+  };
 
-        <label htmlFor="JSC">JSC</label>
-        <input type="checkbox" id="JSC" value="JSC" onChange={handleInput} />
-      </div>
-    </div>
-  );
+  render() {
+    return (
+      <>
+        <div>
+          <h3 style={{ color: 'red' }}>React practice with StackBlitz!</h3>
+          <h4>Checkbox with react</h4>
+
+          <div className="container">
+            <label htmlFor="HSC">HSC</label>
+            <input
+              type="checkbox"
+              id="HSC"
+              value="HSC"
+              name="HSC"
+              onChange={this.submit}
+            />
+            <br />
+            <label htmlFor="SSC">SSC</label>
+            <input
+              type="checkbox"
+              id="SSC"
+              value="SSC"
+              name="SSC"
+              onChange={this.submit}
+            />
+            <br />
+
+            <label htmlFor="JSC">JSC</label>
+            <input
+              type="checkbox"
+              id="JSC"
+              value="JSC"
+              name="JSC"
+              onChange={this.submit}
+            />
+          </div>
+          <br />
+        </div>
+      </>
+    );
+  }
 }
