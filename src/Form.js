@@ -7,11 +7,12 @@ export default function Form() {
   return (
     <>
       <form action="#">
-        <Input label="Name" type="text" placeholder="name" /> <br />
-        <Input label="Email" type="email" placeholder="email" /> <br />
-        <Input label="Password" type="password" placeholder="password" /> <br />
+        <Input label="Name: " type="text" placeholder="name" /> <br />
+        <Input label="Email: " type="email" placeholder="email" /> <br />
+        <Input label="Password: " type="password" placeholder="password" />{' '}
+        <br />
         <Input
-          label="Confirm-Password"
+          label="Confirm-Password: "
           type="password"
           placeholder="confirm-password"
         />
@@ -20,6 +21,7 @@ export default function Form() {
         <Radio name="Female" />
         <br />
         <Checkbox text="I agree all tarms & condition" />
+        <Input type="submit" value="Submit" />
       </form>
     </>
   );
