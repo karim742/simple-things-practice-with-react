@@ -1,5 +1,7 @@
 import React from 'react';
 import Input from './Inputbox';
+import Radio from './Radio';
+import Checkbox from './Checkbox';
 
 export default function Form() {
   return (
@@ -14,8 +16,10 @@ export default function Form() {
           placeholder="confirm-password"
         />
         <br />
-        <Input type="radio" label="Male" name="Gender" id />
-        <Input type="radio" label="Female" name="Gender" />
+        <Radio name="Male" />
+        <Radio name="Female" />
+        <br />
+        <Checkbox text="I agree all tarms & condition" />
       </form>
     </>
   );
