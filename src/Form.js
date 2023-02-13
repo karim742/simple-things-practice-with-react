@@ -12,8 +12,10 @@ export default function Form() {
           label="Confirm-Password"
           type="password"
           placeholder="confirm-password"
-        />{' '}
+        />
         <br />
+        <Input type="radio" label="Male" name="Gender" id />
+        <Input type="radio" label="Female" name="Gender" />
       </form>
     </>
   );
