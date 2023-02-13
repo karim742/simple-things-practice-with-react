@@ -1,10 +1,9 @@
 import React from 'react';
 
-export default function Radio() {
+export default function Radio({ name }) {
   return (
     <>
-      <label htmlFor={name}></label>
-      <input type={type} id={name} />
+      <input type="type" id={name} value={name} name="gender" />
     </>
   );
 }
