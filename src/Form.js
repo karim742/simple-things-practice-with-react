@@ -23,6 +23,7 @@ export default function Form() {
         <br />
         <Checkbox text="I agree all tarms & condition" />
         <br />
+        <br />
         <Input type="submit" value="Submit" />
       </form>
     </>
