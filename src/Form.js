@@ -20,7 +20,9 @@ export default function Form() {
         <Radio name="Male" />
         <Radio name="Female" />
         <br />
+        <br />
         <Checkbox text="I agree all tarms & condition" />
+        <br />
         <Input type="submit" value="Submit" />
       </form>
     </>
